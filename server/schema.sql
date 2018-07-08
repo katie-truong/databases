@@ -3,14 +3,14 @@ CREATE DATABASE chat;
 USE chat;
 
 CREATE TABLE users (
-  userID int,
+  userID int AUTO_INCREMENT,
   userName varchar(20),
   PRIMARY KEY (userID)
 );
 
 CREATE TABLE messages (
   /* Describe your table here.*/
-  messageID int,
+  messageID int AUTO_INCREMENT,
   message text,
   userID int,
   PRIMARY KEY (messageID),
@@ -18,7 +18,7 @@ CREATE TABLE messages (
 );
 
 CREATE TABLE rooms (
-  roomID int,
+  roomID int AUTO_INCREMENT,
   roomName varchar(20),
   PRIMARY KEY (roomID)
 );
@@ -35,7 +35,7 @@ CREATE TABLE friends (
   user2ID int,
   FOREIGN KEY (user1ID) REFERENCES users(userID),
   FOREIGN KEY (user2ID) REFERENCES users(userID)
-)
+);
 
 /* Create other tables and define schemas for them here! */
 

@@ -10,10 +10,9 @@ exports.connection = mysql.createConnection({
   database: 'chat'
 });
 
-//connection.connect();
+// connection.connect();
 
-//connection.end();
+// exports.connection() = connection;
 
 //in model
-db.connection.connect()
 
